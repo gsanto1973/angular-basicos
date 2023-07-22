@@ -1,0 +1,28 @@
+<h1>{{nombre}}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{nombre}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{edad}}</dd>
+
+  <td>Función:</td>
+  <dd>{{obtenerNombre()}}</dd>
+
+  <td>Capitalizado:</td>
+  <!-- <dd>{{nombre.toUpperCase()}}</dd> -->
+  <dd>{{nombreCapitalizado}}</dd>
+</dl>
+
+<button *ngIf="nombre!=='Spiderman'" (click)="cambiarNombre()" class="btn btn-primary mx-2">
+  Cambiar nombre
+</button>
+
+<button *ngIf="edad!==30" (click)="cambiarEdad()" class="btn btn-primary mx-2">
+  Cambiar edad
+</button>
+
+<button (click)="resetForm()">
+  Reset
+</button>
